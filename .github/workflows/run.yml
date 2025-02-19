@@ -5,9 +5,9 @@ on:
     branches: 
       - master
   schedule:
-    - cron: '0 16,19,22,1,4,7 * * *'
-    - cron: '*/30 10-15 * * *'
-
+    - cron: '0 16,1,4,6,8,10 * * *'  # UTC 时间对应东八区 0:00, 9:00, 12:00, 14:00, 16:00, 18:00
+    - cron: '*/15 12-14 * * *'  # UTC 时间 12:00-14:59（东八区 20:00-22:59）
+    
 env:
   UPDATE_IPV4: true
   UPDATE_IPV6: false
